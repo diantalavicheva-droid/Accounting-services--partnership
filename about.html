@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>За нас | Счетоводно партньорство</title>
+<style>
+:root {
+  --bg:#0f172a; --bg-light:#111827; --text:#e5e7eb; --muted:#9ca3af;
+  --accent:#38bdf8; --card:#020617; --border:#1f2933;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:system-ui,sans-serif;background:linear-gradient(180deg,var(--bg),var(--bg-light));color:var(--text);}
+a{color:var(--accent);text-decoration:none;}
+header{border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(15,23,42,0.9);backdrop-filter:blur(8px);z-index:10;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 1rem;}
+.logo img{height:90px;width:auto;}
+nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0;align-items:center;}
+nav ul li img{width:28px;height:17.5px;object-fit:cover;margin-right:0.2rem;}
+section{padding:4rem 1rem;}
+h2,h3{margin-top:0;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.5rem;}
+.calendly{text-align:center;margin:2rem 0;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><img src="logo.png" alt="Лого"></div>
+    <ul>
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="about.html">За нас</a></li>
+      <li><a href="services.html">Услуги</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+      <li>
+        <a href="#" onclick="changeLang('bg')"><img src="bg.png" alt="BG">BG</a> &nbsp;|&nbsp;
+        <a href="#" onclick="changeLang('en')"><img src="us.png" alt="US">US</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section>
+  <h2>За нас</h2>
+  <p>Дългогодишни партньори със самостоятелни счетоводни практики, обединени от високи стандарти на обслужване и ясно разграничена отговорност към клиентите.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>ДТ БИЗНЕС СЪЛЮШЪНС ООД</h3>
+      <p>Телефон: +359878476656<br>Email: desy_i_t@yahoo.com</p>
+      <p>С над 15 години опит в счетоводството и данъчното обслужване.</p>
+    </div>
+    <div class="card">
+      <h3>НорДиа ИНВЕСТ ЕООД</h3>
+      <p>Телефон: +359883374600<br>Email: office@nordiainvest.org</p>
+      <p>Дългогодишен опит с дружества от различни сектори и дигитални инструменти за дистанционна работа.</p>
+    </div>
+  </div>
+
+  <div class="calendly">
+    <a href="https://calendly.com/office-nordiainvest/30min" target="_blank" class="cta">
+      Резервирай безплатна онлайн среща (около 30 мин.), където да се запознаем, поговорим и отговорим на въпросите ти
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>Настоящият сайт представя партньорство между независими счетоводни практики. <a href="contact.html">Контакти</a></p>
+</footer>
+
+<script>
+function changeLang(lang){
+  const page=window.location.pathname.split("/").pop();
+  if(lang==='en'){
+    if(page==='about.html') window.location.href='about-en.html';
+    if(page==='index.html') window.location.href='index-en.html';
+    if(page==='services.html') window.location.href='services-en.html';
+    if(page==='contact.html') window.location.href='contact-en.html';
+  }else if(lang==='bg'){
+    if(page==='about-en.html') window.location.href='about.html';
+    if(page==='index-en.html') window.location.href='index.html';
+    if(page==='services-en.html') window.location.href='services.html';
+    if(page==='contact-en.html') window.location.href='contact.html';
+  }
+}
+</script>
+
+</body>
+</html>

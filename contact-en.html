@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Accounting Partnership</title>
+<meta name="description" content="Get in touch with our independent accounting practices.">
+<style>
+/* CSS идентично с българската версия */
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo"><img src="logo.png" alt="Logo"></div>
+<ul>
+<li><a href="index-en.html">Home</a></li>
+<li><a href="about-en.html">About us</a></li>
+<li><a href="services-en.html">Services</a></li>
+<li><a href="contact-en.html">Contact</a></li>
+<li>
+<a href="#" onclick="changeLang('bg')"><img src="bg.png" alt="BG">BG</a> &nbsp;|&nbsp;
+<a href="#" onclick="changeLang('en')"><img src="us.png" alt="US">US</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section>
+<h1>Choose an Accountant</h1>
+<p>Please select which accounting practice you would like to contact. Each inquiry is handled directly by the respective practice.</p>
+
+<div class="grid">
+<div class="card">
+<h3>DT BUSINESS SOLUTIONS LTD</h3>
+<p>Email: desy_i_t@yahoo.com<br>Phone: +359878476656</p>
+</div>
+
+<div class="card">
+<h3>NorDia INVEST EOOD</h3>
+<p>Email: office@nordiainvest.org<br>Phone: +359883374600</p>
+</div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="https://calendly.com/office-nordiainvest/30min" target="_blank" class="cta">
+Book a free online meeting (about 30 min.) to get acquainted, discuss and answer your questions
+</a>
+</div>
+
+</section>
+</main>
+
+<footer>
+<p>This website presents a partnership between independent accounting practices.</p>
+</footer>
+
+<script>
+function changeLang(lang){
+  const page=window.location.pathname.split("/").pop();
+  if(lang==='en'){
+    if(page==='contact.html') window.location.href='contact-en.html';
+    if(page==='index.html') window.location.href='index-en.html';
+    if(page==='about.html') window.location.href='about-en.html';
+    if(page==='services.html') window.location.href='services-en.html';
+  }else if(lang==='bg'){
+    if(page==='contact-en.html') window.location.href='contact.html';
+    if(page==='index-en.html') window.location.href='index.html';
+    if(page==='about-en.html') window.location.href='about.html';
+    if(page==='services-en.html') window.location.href='services.html';
+  }
+}
+</script>
+
+</body>
+</html>
