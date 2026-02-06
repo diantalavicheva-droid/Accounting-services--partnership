@@ -28,5 +28,25 @@ The scope of services and terms of cooperation are determined individually,
 depending on the client’s business activity and specific requirements.
 </p>
 </section>
+  <script>
+  const lang = localStorage.getItem('lang') || 'bg';
+
+  if (
+    (lang === 'en' && !window.location.pathname.includes('-en')) ||
+    (lang === 'bg' && window.location.pathname.includes('-en'))
+  ) {
+    const current = window.location.pathname.split("/").pop();
+    if (lang === 'en') window.location.href = current.replace('.html', '-en.html');
+    else window.location.href = current.replace('-en.html', '.html');
+  }
+
+  function changeLang(l) {
+    localStorage.setItem('lang', l);
+    const current = window.location.pathname.split("/").pop();
+    if (l === 'en') window.location.href = current.replace('.html', '-en.html');
+    else window.location.href = current.replace('-en.html', '.html');
+  }
+</script>
 </body>
 </html>
+
