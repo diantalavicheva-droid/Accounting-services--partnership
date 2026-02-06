@@ -3,61 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About us | Accounting Partnership</title>
-<style>
-/* същият CSS като за българската версия */
-</style>
+<title>About Us | Accounting Partnership</title>
+<meta name="description" content="Partnership of independent accounting practices with over 15 years of experience.">
+<!-- стилът е идентичен -->
 </head>
 <body>
+<section style="padding:4rem 1rem;max-width:900px;margin:auto">
+<h1>Partnership with Clear Principles</h1>
+<p>
+Long-term partners with independent accounting practices,
+united by high service standards, professional ethics,
+and clearly defined responsibility to clients.
+</p>
 
-<header>
-  <nav>
-    <div class="logo"><img src="logo.png" alt="Logo"></div>
-    <ul>
-      <li><a href="index-en.html">Home</a></li>
-      <li><a href="about-en.html">About us</a></li>
-      <li><a href="services-en.html">Services</a></li>
-      <li><a href="contact-en.html">Contact</a></li>
-      <li>
-        <a href="#" onclick="changeLang('bg')"><img src="bg.png" alt="BG">BG</a> &nbsp;|&nbsp;
-        <a href="#" onclick="changeLang('en')"><img src="us.png" alt="US">US</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<p>
+Each practice operates independently and enters into contracts directly with its clients,
+while sharing a common approach to quality, communication, and long-term cooperation.
+</p>
 
-<main>
-<section>
-  <h2>About us</h2>
-  <p>Long-term partners with independent accounting practices, united by high standards of service and clear responsibilities to clients.</p>
+<p style="text-align:center;margin:3rem 0">
+<a href="https://calendly.com/office-nordiainvest/30min" target="_blank">
+Book a free online meeting (approx. 30 min)
+</a>
+</p>
 
-  <div class="grid">
-    <div class="card">
-      <h3>DT BUSINESS SOLUTIONS LTD</h3>
-      <p>Phone: +359878476656<br>Email: desy_i_t@yahoo.com</p>
-      <p>Over 15 years of experience in accounting and tax services.</p>
-    </div>
-    <div class="card">
-      <h3>NorDia INVEST EOOD</h3>
-      <p>Phone: +359883374600<br>Email: office@nordiainvest.org</p>
-      <p>Extensive experience with companies from different sectors and digital tools for remote collaboration.</p>
-    </div>
-  </div>
+<h2>DT BUSINESS SOLUTIONS LTD</h2>
+<p>
+Over 15 years of experience in accounting and tax matters.
+Provides comprehensive accounting and tax support with a focus on clarity and reliability.
+</p>
+<p>Phone: +359 878 476 656<br>Email: desy_i_t@yahoo.com</p>
 
-  <div class="calendly">
-    <a href="https://calendly.com/office-nordiainvest/30min" target="_blank" class="cta">
-      Book a free online meeting (~30 min) to get to know us, discuss, and answer your questions
-    </a>
-  </div>
+<h2>NorDia INVEST EOOD</h2>
+<p>
+More than 15 years of professional experience in accounting services for companies
+from various industries, focused on sustainable and compliant solutions.
+</p>
+<p>Phone: +359 883 374 600<br>Email: office@nordiainvest.org</p>
 </section>
-</main>
-
-<footer>
-  <p>This website presents a partnership between independent accounting practices. <a href="contact-en.html">Contact</a></p>
-</footer>
 
 <script>
-// същият changeLang JS
+const lang=localStorage.getItem('lang')||'bg';
+if(lang==='bg')location.href='about.html';
+function changeLang(l){localStorage.setItem('lang',l);location.reload();}
 </script>
 </body>
 </html>
